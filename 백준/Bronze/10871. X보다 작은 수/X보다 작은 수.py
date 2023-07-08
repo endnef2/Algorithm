@@ -1,7 +1,5 @@
-n, x = map(int, input().split())
-a = list(map(int, input().split()))
-b = []
-for i in range(n) :
-    if a[i] < x :
-        b.append(a[i])
-print(*b)
+N, X = map(int, input().split())
+lst1 = list(map(int, input().split()))
+for i in lst1:
+    if i < X :
+        print(i, end=' ')
