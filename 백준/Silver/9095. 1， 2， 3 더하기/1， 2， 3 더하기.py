@@ -1,16 +1,16 @@
 from collections import deque
 def bfs(n):
-    que=deque([(n, 1)])
-    total=0
+    que=deque([n])
+    cnt=0
     while que:
-        node, cnt = que.popleft()
+        node = que.popleft()
         if node==0:
-            total+=cnt
+            cnt+=1
         else:
             for i in [node-1, node-2, node-3]:
                 if i >= 0:
-                    que.append((i, cnt))
-    return total
+                    que.append(i)
+    return cnt
 T = int(input())
 for i in range(T):
     n = int(input())
