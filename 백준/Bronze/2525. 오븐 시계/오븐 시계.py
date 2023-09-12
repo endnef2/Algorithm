@@ -1,11 +1,4 @@
-import sys
-a, b = map(int, sys.stdin.readline().split())
-c = int(sys.stdin.readline())
-if b+c>=60:
-    n = (b+c)//60
-    if (a+n) < 24:
-        print(a+n, b+c-60*n)
-    else:
-        print(a+n-24, b+c-60*n)
-else:
-    print(a, b+c)
+a, b = map(int, input().split())
+c = int(input())
+total = a*60 + b + c
+print((total//60)%24, total%60)
