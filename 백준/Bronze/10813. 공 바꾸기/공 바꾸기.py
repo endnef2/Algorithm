@@ -1,6 +1,10 @@
 n, m = map(int, input().split())
-lst1 = list(range(0, n+1))
-for _ in range(m):
-    i, j = map(int, input().split())
-    lst1[i], lst1[j] = lst1[j], lst1[i]
-print(*lst1[1:], end=' ')
+lst1=[]
+for i in range(n):
+    lst1.append(i+1)
+for i in range(m):
+    a, b = map(int, input().split())
+    c = lst1[a-1]
+    lst1[a-1] = lst1[b-1]
+    lst1[b-1] = c
+print(*lst1)
