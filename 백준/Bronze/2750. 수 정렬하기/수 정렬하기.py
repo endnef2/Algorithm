@@ -1,8 +1,5 @@
-import sys
-N = int(input())
-lst1 = set()
-for i in range(N):
-    lst1.add(int(sys.stdin.readline()))
-lst2 = sorted(set(lst1))
-for i in lst2 : 
-    print(i)
+n = int(input())
+lst1 = []
+for _ in range(n):
+    lst1.append(int(input()))
+print(*sorted(lst1), sep='\n')
